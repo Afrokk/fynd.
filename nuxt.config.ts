@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: '@use "./assets/styles/partials.sass" as *\n'
+          additionalData: '@use "./assets/styles/partials.sass" as *\n',
         },
       },
     },
