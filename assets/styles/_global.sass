@@ -1,3 +1,9 @@
 @use './mixins' as *
-    
+@use './variables' as *
 @include css-reset
+@font-face
+    font-family: "Sk-Modernist-Regular"
+    src: url("/fonts/Sk-Modernist-Regular.woff2")format("woff2")
+
+:root
+    font-family: $main-font
