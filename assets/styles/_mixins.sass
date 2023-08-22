@@ -1,38 +1,22 @@
-@mixin css-reset 
-    *, *:before, *:after
-        box-sizing: border-box
+@use 'variables' as *
 
-    html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
-        margin: 0
-        padding: 0
-        border: 0
-        font-size: 100%
-        font: inherit
-        vertical-align: baseline
-        text-rendering: optimizeLegibility
-        -webkit-font-smoothing: antialiased
-        text-size-adjust: none
+// Media Queries:
+@mixin down-xsm
+    @media(max-width: $media-xsm)
+        @content
 
-    footer, header, nav, section, main
-        display: block
+@mixin down-sm
+    @media(max-width: $media-sm)
+        @content
 
-    body
-        line-height: 1
+@mixin down-md
+    @media(max-width: $media-md)
+        @content
 
-    ol, ul
-        list-style: none
+@mixin down-lg
+    @media(max-width: $media-lg)
+        @content
 
-    blockquote, q
-        quotes: none
-
-    blockquote:before, blockquote:after, q:before, q:after
-        content: ''
-        content: none
-
-    table
-        border-collapse: collapse
-        border-spacing: 0
-
-    input
-        -webkit-appearance: none
-        border-radius: 0
+@mixin custom-breakpoint($breakpoint)
+    @media(max-width: $breakpoint)
+        @content

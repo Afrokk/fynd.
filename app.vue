@@ -7,5 +7,5 @@
 
 <style lang="sass">
 h1
-  color: $primary
+  color: $color-primary
 </style>
